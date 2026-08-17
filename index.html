@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Dimitri JC Suffrin · Global Health</title>
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9f7f4;
+      color: #1e2b3c;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* --- palette --- */
+    :root {
+      --navy: #0f2a3b;
+      --teal: #2f7d7a;
+      --gold: #c6a15b;
+      --cream: #f5f0e8;
+      --offwhite: #fcfaf7;
+      --dark: #1e2b3c;
+      --light-text: #f0ede8;
+    }
+
+    h1, h2, h3, h4, .serif {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      letter-spacing: -0.01em;
+      border-bottom: 3px solid var(--gold);
+      padding-bottom: 0.5rem;
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--navy);
+    }
+
+    .section-sub {
+      font-size: 1.1rem;
+      color: #3d4f5e;
+      max-width: 700px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* header / nav */
+    .navbar {
+      background: var(--navy);
+      padding: 0.8rem 0;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .nav-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo a {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #e6e2db;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      transition: 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-icons a {
+      color: #d6d0c7;
+      margin-left: 0.8rem;
+      font-size: 1.1rem;
+    }
+    .nav-icons a:hover {
+      color: var(--gold);
+    }
+
+    /* hero */
+    .hero {
+      background: var(--offwhite);
+      padding: 3rem 0 3.5rem;
+      border-bottom: 1px solid #e0dad3;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      line-height: 1.1;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-content .subhead {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #2f5a5a;
+      margin-bottom: 0.8rem;
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+    }
+
+    .hero-content .tagline {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--teal);
+      margin: 1rem 0 0.8rem;
+      letter-spacing: -0.5px;
+      font-family: 'Libre Baskerville', serif;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: #2d4052;
+      max-width: 500px;
+      margin-bottom: 1.8rem;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--navy);
+      color: white;
+      padding: 0.7rem 1.8rem;
+      font-weight: 600;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: 0.2s;
+      border: 1px solid transparent;
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .btn-gold:hover {
+      background: #b58e4a;
+      color: #0f1f2b;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--navy);
+      color: var(--navy);
+    }
+    .btn-outline:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    .hero-img {
+      background: #e2dbd1;
+      border-radius: 20px;
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400"><rect width="400" height="400" fill="%23d6cdbf"/><circle cx="200" cy="160" r="70" fill="%23b7a99b"/><circle cx="160" cy="140" r="10" fill="%23333"/><circle cx="240" cy="140" r="10" fill="%23333"/><path d="M170 190 Q200 210, 230 190" stroke="%23333" stroke-width="6" fill="none"/><rect x="140" y="240" width="120" height="120" rx="30" fill="%239e8e7e"/><rect x="155" y="260" width="30" height="40" rx="5" fill="%23333"/><rect x="215" y="260" width="30" height="40" rx="5" fill="%23333"/></svg>');
+      background-size: cover;
+      background-position: center;
+      border: 2px solid var(--gold);
+    }
+
+    /* expertise cards */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0 1rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.8rem 1.5rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+      border: 1px solid #e8e2da;
+      transition: 0.2s;
+    }
+    .card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+    }
+    .card i {
+      font-size: 1.8rem;
+      color: var(--teal);
+      margin-bottom: 0.8rem;
+    }
+    .card h4 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--navy);
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #3e5467;
+      margin-top: 0.3rem;
+    }
+
+    /* impact stats */
+    .impact-stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+      background: var(--navy);
+      color: white;
+      padding: 2.5rem 2rem;
+      border-radius: 40px;
+      margin: 2rem 0;
+    }
+    .stat-item {
+      flex: 1 1 120px;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      font-family: 'Libre Baskerville', serif;
+      color: var(--gold);
+    }
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* featured research */
+    .feature-card {
+      background: white;
+      border-radius: 24px;
+      padding: 2.2rem;
+      border-left: 8px solid var(--gold);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.02);
+      margin: 2rem 0 1.5rem;
+    }
+    .feature-card h3 {
+      font-family: 'Libre Baskerville', serif;
+      color: var(--navy);
+    }
+    .feature-card p {
+      color: #2a4055;
+      max-width: 700px;
+    }
+
+    /* publications */
+    .pub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+      margin: 2rem 0;
+    }
+    .pub-item {
+      background: white;
+      padding: 1.8rem;
+      border-radius: 20px;
+      border: 1px solid #e2dad2;
+    }
+    .pub-item h4 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .pub-meta {
+      font-size: 0.85rem;
+      color: #4f667b;
+    }
+    .pub-item a {
+      display: inline-block;
+      margin-top: 0.8rem;
+      color: var(--teal);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* articles */
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .article-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem 1.5rem;
+      border: 1px solid #e8e1d8;
+    }
+    .article-card .cat {
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .article-card h4 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      margin: 0.3rem 0 0.5rem;
+      font-size: 1.2rem;
+    }
+    .article-card a {
+      color: var(--teal);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* footer */
+    .footer {
+      background: var(--navy);
+      color: #d9d4cc;
+      padding: 3rem 0 2rem;
+      margin-top: 3rem;
+      border-top: 3px solid var(--gold);
+    }
+    .footer a {
+      color: #cdc6bb;
+      text-decoration: none;
+      margin: 0 0.8rem 0 0;
+    }
+    .footer a:hover {
+      color: var(--gold);
+    }
+    .footer .brand {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.2rem;
+      color: white;
+    }
+    .footer .brand span {
+      color: var(--gold);
+    }
+
+    @media (max-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .btn-group {
+        justify-content: center;
+      }
+      .nav-links {
+        gap: 0.6rem 1.2rem;
+        justify-content: center;
+        margin-top: 0.5rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+      .impact-stats {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+  <div class="container nav-flex">
+    <div class="logo"><a href="#">Dr. <span>Suffrin</span></a></div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Expertise</a>
+      <a href="#">Impact</a>
+      <a href="#">Research</a>
+      <a href="#">Publications</a>
+      <a href="#">Articles</a>
+      <a href="#">Insights</a>
+      <a href="#">Speaking</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="nav-icons">
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-orcid"></i></a>
+      <a href="#"><i class="fab fa-google-scholar"></i></a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <h1>Dr. Dimitri JC Suffrin</h1>
+      <div class="subhead">MD, MMSc-GHD · Global Health Technical Consultant</div>
+      <div class="tagline">Advancing Health Equity Through Research, Innovation &amp; Global Health Delivery</div>
+      <p>A physician, global health researcher and program implementation specialist committed to reducing health disparities and improving access to quality healthcare for underserved communities.</p>
+      <div class="btn-group">
+        <a href="#" class="btn btn-gold">Explore My Work</a>
+        <a href="#" class="btn btn-outline">View Publications</a>
+        <a href="#" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-img" aria-label="professional portrait of Dr. Suffrin"></div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section style="padding: 3rem 0 1rem;">
+  <div class="container">
+    <h2 class="section-title">Areas of Expertise</h2>
+    <div class="expertise-grid">
+      <div class="card"><i class="fas fa-virus"></i><h4>HIV/AIDS</h4><p>Prevention, treatment, retention and program implementation.</p></div>
+      <div class="card"><i class="fas fa-lungs"></i><h4>Tuberculosis</h4><p>TB/HIV integrated care and clinical program delivery.</p></div>
+      <div class="card"><i class="fas fa-globe-americas"></i><h4>Global Health</h4><p>Health equity, systems and global delivery.</p></div>
+      <div class="card"><i class="fas fa-cogs"></i><h4>Program Implementation</h4><p>Design, evaluation of healthcare programs.</p></div>
+      <div class="card"><i class="fas fa-tree"></i><h4>Rural Healthcare</h4><p>Improving delivery to rural/underserved populations.</p></div>
+      <div class="card"><i class="fas fa-balance-scale"></i><h4>Health Equity</h4><p>Addressing disparities affecting marginalized groups.</p></div>
+      <div class="card"><i class="fas fa-flask"></i><h4>Research &amp; Evidence</h4><p>Translating findings into practice.</p></div>
+      <div class="card"><i class="fas fa-stethoscope"></i><h4>Clinical Care</h4><p>Delivering and supporting high-quality services.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section style="padding: 1rem 0 2rem;">
+  <div class="container">
+    <h2 class="section-title">Impact</h2>
+    <div class="impact-stats">
+      <div class="stat-item"><div class="stat-number">15+</div><div class="stat-label">Years Global &amp; Clinical Experience</div></div>
+      <div class="stat-item"><div class="stat-number">Multiple</div><div class="stat-label">Countries · International Programs</div></div>
+      <div class="stat-item"><div class="stat-number">10+</div><div class="stat-label">Publications &amp; Academic Contributions</div></div>
+      <div class="stat-item"><div class="stat-number">Harvard</div><div class="stat-label">MMSc Global Health Delivery</div></div>
+      <div class="stat-item"><div class="stat-number">HIV &amp; TB</div><div class="stat-label">Program Implementation Expertise</div></div>
+    </div>
+
+    <div class="feature-card">
+      <h3>🏥 Building Rural Models of HIV &amp; TB Care</h3>
+      <p>Dr. Suffrin contributed to implementation of rural-based HIV/TB care models designed to provide high-quality clinical services to underserved populations in Malawi and beyond.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH + PUBLICATIONS (combined preview) -->
+<section style="padding: 1rem 0 0;">
+  <div class="container">
+    <h2 class="section-title">Research &amp; Evidence</h2>
+    <p class="section-sub">Dr. Suffrin’s research focuses on translating frontline healthcare experience into evidence that can improve health programs, clinical outcomes and health equity.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin-bottom: 2rem;">
+      <span style="background:#e3ded7; padding:0.3rem 1.2rem; border-radius:40px;">HIV/AIDS</span>
+      <span style="background:#e3ded7; padding:0.3rem 1.2rem; border-radius:40px;">TB/HIV integrated care</span>
+      <span style="background:#e3ded7; padding:0.3rem 1.2rem; border-radius:40px;">Adolescent Health</span>
+      <span style="background:#e3ded7; padding:0.3rem 1.2rem; border-radius:40px;">Health Systems</span>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS preview -->
+<section style="padding: 1rem 0 2rem;">
+  <div class="container">
+    <h2 class="section-title">Featured Publications</h2>
+    <div class="pub-grid">
+      <div class="pub-item">
+        <h4>Re-engagement and retention in HIV care after preventive default tracking</h4>
+        <div class="pub-meta">PLOS Global Public Health, 2024</div>
+        <p>Rural Malawi cohort study on HIV care retention.</p>
+        <a href="#">Read Publication →</a>
+      </div>
+      <div class="pub-item">
+        <h4>Advanced HIV disease management in rural Malawi</h4>
+        <div class="pub-meta">AIDS Research and Therapy, 2025</div>
+        <p>Examined outcomes at two rural hospitals, Neno District.</p>
+        <a href="#">Read Publication →</a>
+      </div>
+      <div class="pub-item">
+        <h4>Impact of a teen club model on HIV outcomes among adolescents</h4>
+        <div class="pub-meta">BMJ Open</div>
+        <p>Adolescent HIV treatment outcomes in rural Malawi.</p>
+        <a href="#">Read Publication →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES & PERSPECTIVES -->
+<section style="padding: 1rem 0 2rem; background: #f3efe9;">
+  <div class="container">
+    <h2 class="section-title">Articles &amp; Perspectives</h2>
+    <div class="article-grid">
+      <div class="article-card">
+        <div class="cat">Health Equity</div>
+        <h4>Beyond Access: What Does Health Equity Really Mean?</h4>
+        <p>Reflections on systemic barriers and meaningful change.</p>
+        <a href="#">Read Article →</a>
+      </div>
+      <div class="article-card">
+        <div class="cat">Global Health</div>
+        <h4>Lessons From Delivering Healthcare in Rural Communities</h4>
+        <p>Field insights from Malawi and beyond.</p>
+        <a href="#">Read Article →</a>
+      </div>
+      <div class="article-card">
+        <div class="cat">HIV/AIDS</div>
+        <h4>The Future of HIV Care in Underserved Communities</h4>
+        <p>Innovations and program design for lasting impact.</p>
+        <a href="#">Read Article →</a>
+      </div>
+    </div>
+    <div style="text-align: right; margin-top: 0.5rem;"><a href="#" style="font-weight:600; color:var(--teal);">View all articles →</a></div>
+  </div>
+</section>
+
+<!-- CONNECT / COLLABORATE -->
+<section style="padding: 2rem 0 1.5rem;">
+  <div class="container">
+    <h2 class="section-title">Connect &amp; Collaborate</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 1.2rem 2.5rem; background: white; padding: 2rem; border-radius: 40px; border: 1px solid #ddd6cc;">
+      <a href="#" style="font-weight:600; color:var(--navy);"><i class="fab fa-orcid"></i> ORCID</a>
+      <a href="#" style="font-weight:600; color:var(--navy);"><i class="fab fa-google-scholar"></i> Google Scholar</a>
+      <a href="#" style="font-weight:600; color:var(--navy);"><i class="fab fa-pubmed"></i> PubMed</a>
+      <a href="#" style="font-weight:600; color:var(--navy);"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="#" style="font-weight:600; color:var(--navy);"><i class="fas fa-graduation-cap"></i> Harvard Profile</a>
+      <a href="#" style="font-weight:600; color:var(--navy);"><i class="fas fa-briefcase"></i> WCFR</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="brand">Dr. Dimitri JC Suffrin <span>·</span> MD <span>·</span> MMSc-GHD <span>·</span> Global Health Technical Consultant</div>
+    <div style="margin: 0.8rem 0 1.2rem;">Advancing health equity through evidence, innovation and better healthcare delivery.</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem 1.8rem;">
+      <a href="#">About</a><a href="#">Expertise</a><a href="#">Impact</a><a href="#">Research</a><a href="#">Publications</a>
+      <a href="#">Insights</a><a href="#">Speaking</a><a href="#">Contact</a>
+    </div>
+    <div style="margin-top: 1.5rem; border-top: 1px solid #3a4f5f; padding-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem;">
+      <a href="#"><i class="fab fa-orcid"></i> ORCID</a>
+      <a href="#"><i class="fab fa-pubmed"></i> PubMed</a>
+      <a href="#"><i class="fab fa-google-scholar"></i> Google Scholar</a>
+      <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="#">WCFR</a>
+    </div>
+    <div style="margin-top: 1.2rem; font-size: 0.85rem; opacity:0.7;">© 2026 Dr. Dimitri JC Suffrin · Evidence. Equity. Impact.</div>
+  </div>
+</footer>
+
+</body>
+</html>
