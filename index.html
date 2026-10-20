@@ -7,189 +7,291 @@
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-     <link rel= stylesheet href=css/style.css>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="navbar">
+<nav class="navbar" id="navbar">
   <div class="container nav-flex">
     <div class="logo">
-  <a href="#">
-    <img src="images/Drsuffrinlogo.png" alt="Dr. Suffrin Logo">
-  </a>
+      <a href="#">
+        <img src="images/Drsuffrinlogo.png" alt="Dr. Suffrin Logo">
+      </a>
     </div>
-        <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">About</a>
+
+    <div class="nav-links" id="nav-links">
+      <a href="#hero" class="active">Home</a>
+      <a href="#about">About</a>
+
       <div class="nav-dropdown">
         <a href="#" class="nav-dropdown-toggle">Work <i class="fas fa-chevron-down fa-xs"></i></a>
         <div class="nav-dropdown-menu">
-          <a href="#">Expertise</a>
-          <a href="#">Impact</a>
-          <a href="#">Program Implementation</a>
+          <a href="#expertise"><i class="fas fa-star fa-fw"></i> Expertise</a>
+          <a href="#impact"><i class="fas fa-chart-line fa-fw"></i> Impact</a>
+          <a href="#implementation"><i class="fas fa-cogs fa-fw"></i> Program Implementation</a>
         </div>
       </div>
+
       <div class="nav-dropdown">
         <a href="#" class="nav-dropdown-toggle">Research <i class="fas fa-chevron-down fa-xs"></i></a>
         <div class="nav-dropdown-menu">
-          <a href="#">Research &amp; Evidence</a>
-          <a href="#">Publications</a>
+          <a href="#research"><i class="fas fa-flask fa-fw"></i> Research &amp; Evidence</a>
+          <a href="#publications"><i class="fas fa-book fa-fw"></i> Publications</a>
         </div>
       </div>
+
       <div class="nav-dropdown">
         <a href="#" class="nav-dropdown-toggle">Insights <i class="fas fa-chevron-down fa-xs"></i></a>
         <div class="nav-dropdown-menu">
-          <a href="#">Articles &amp; Perspectives</a>
-          <a href="#">Speaking</a>
+          <a href="#articles"><i class="fas fa-newspaper fa-fw"></i> Articles &amp; Perspectives</a>
+          <a href="#speaking"><i class="fas fa-microphone fa-fw"></i> Speaking</a>
         </div>
       </div>
-      <a href="#">Contact</a>
+
+      <a href="#contact">Contact</a>
     </div>
-    <div class="nav-icons">
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#"><i class="fab fa-orcid"></i></a>
-      <a href="#" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+
+    <div class="nav-right">
+      <div class="nav-icons">
+        <a href="#" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" title="ORCID" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
+        <a href="#" title="Google Scholar" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+      </div>
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="hero">
   <div class="container hero-grid">
     <div class="hero-content">
-      <h1>Dr. Dimitri JC Suffrin</h1>
-      <div class="subhead">MD, MMSc-GHD · Global Health Technical Consultant</div>
+      <div class="hero-eyebrow">Global Health Technical Consultant</div>
+      <h1>Dr. Dimitri<br>JC Suffrin</h1>
+      <div class="subhead">MD, MMSc-GHD</div>
       <div class="tagline">Advancing Health Equity Through Research, Innovation &amp; Global Health Delivery</div>
       <p>A physician, global health researcher and program implementation specialist committed to reducing health disparities and improving access to quality healthcare for underserved communities.</p>
       <div class="btn-group">
-        <a href="#" class="btn btn-gold">Explore My Work</a>
-        <a href="#" class="btn btn-outline">View Publications</a>
-        <a href="#" class="btn btn-outline">Get in Touch</a>
+        <a href="#expertise" class="btn btn-gold">Explore My Work</a>
+        <a href="#publications" class="btn btn-outline">View Publications</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
       </div>
     </div>
-    <div class="hero-img" aria-label="professional portrait of Dr. Suffrin"></div>
+    <div class="hero-img" role="img" aria-label="Professional portrait of Dr. Suffrin"></div>
+  </div>
+  <div class="hero-scroll-hint">
+    <a href="#expertise" aria-label="Scroll down"><i class="fas fa-chevron-down"></i></a>
   </div>
 </section>
 
 <!-- EXPERTISE -->
-<section style="padding: 3rem 0 1rem;">
+<section class="section" id="expertise">
   <div class="container">
     <h2 class="section-title">Areas of Expertise</h2>
     <div class="expertise-grid">
-      <div class="card"><i class="fas fa-virus"></i><h4>HIV/AIDS</h4><p>Prevention, treatment, retention and program implementation.</p></div>
-      <div class="card"><i class="fas fa-lungs"></i><h4>Tuberculosis</h4><p>TB/HIV integrated care and clinical program delivery.</p></div>
-      <div class="card"><i class="fas fa-globe-americas"></i><h4>Global Health</h4><p>Health equity, systems and global delivery.</p></div>
-      <div class="card"><i class="fas fa-cogs"></i><h4>Program Implementation</h4><p>Design, evaluation of healthcare programs.</p></div>
-      <div class="card"><i class="fas fa-tree"></i><h4>Rural Healthcare</h4><p>Improving delivery to rural/underserved populations.</p></div>
-      <div class="card"><i class="fas fa-balance-scale"></i><h4>Health Equity</h4><p>Addressing disparities affecting marginalized groups.</p></div>
-      <div class="card"><i class="fas fa-flask"></i><h4>Research &amp; Evidence</h4><p>Translating findings into practice.</p></div>
-      <div class="card"><i class="fas fa-stethoscope"></i><h4>Clinical Care</h4><p>Delivering and supporting high-quality services.</p></div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-virus"></i></div>
+        <h4>HIV/AIDS</h4>
+        <p>Prevention, treatment, retention and program implementation.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-lungs"></i></div>
+        <h4>Tuberculosis</h4>
+        <p>TB/HIV integrated care and clinical program delivery.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-globe-americas"></i></div>
+        <h4>Global Health</h4>
+        <p>Health equity, systems strengthening and global delivery.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-cogs"></i></div>
+        <h4>Program Implementation</h4>
+        <p>Design, scale-up and evaluation of healthcare programs.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-map-marked-alt"></i></div>
+        <h4>Rural Healthcare</h4>
+        <p>Improving delivery to rural and underserved populations.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+        <h4>Health Equity</h4>
+        <p>Addressing disparities affecting marginalized communities.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-flask"></i></div>
+        <h4>Research &amp; Evidence</h4>
+        <p>Translating frontline findings into evidence-based practice.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-stethoscope"></i></div>
+        <h4>Clinical Care</h4>
+        <p>Delivering and supporting high-quality health services.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- IMPACT -->
-<section style="padding: 1rem 0 2rem;">
+<section class="section section-alt" id="impact">
   <div class="container">
     <h2 class="section-title">Impact</h2>
     <div class="impact-stats">
-      <div class="stat-item"><div class="stat-number">15+</div><div class="stat-label">Years Global &amp; Clinical Experience</div></div>
-      <div class="stat-item"><div class="stat-number">Multiple</div><div class="stat-label">Countries · International Programs</div></div>
-      <div class="stat-item"><div class="stat-number">10+</div><div class="stat-label">Publications &amp; Academic Contributions</div></div>
-      <div class="stat-item"><div class="stat-number">Harvard</div><div class="stat-label">MMSc Global Health Delivery</div></div>
-      <div class="stat-item"><div class="stat-number">HIV &amp; TB</div><div class="stat-label">Program Implementation Expertise</div></div>
+      <div class="stat-item">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Years Global &amp; Clinical Experience</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-number">Multiple</div>
+        <div class="stat-label">Countries · International Programs</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Publications &amp; Academic Contributions</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-number">Harvard</div>
+        <div class="stat-label">MMSc Global Health Delivery</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-number">HIV &amp; TB</div>
+        <div class="stat-label">Program Implementation Expertise</div>
+      </div>
     </div>
 
-    <div class="feature-card">
+    <div class="feature-card" id="implementation">
+      <div class="feature-card-tag">Featured Work</div>
       <h3>🏥 Building Rural Models of HIV &amp; TB Care</h3>
-      <p>Dr. Suffrin contributed to implementation of rural-based HIV/TB care models designed to provide high-quality clinical services to underserved populations in Malawi and beyond.</p>
+      <p>Dr. Suffrin contributed to the implementation of rural-based HIV/TB care models designed to deliver high-quality clinical services to underserved populations in Malawi and beyond — bridging the gap between global health policy and frontline practice.</p>
+      <a href="#" class="btn btn-gold" style="margin-top:1.2rem; display:inline-block;">Learn More →</a>
     </div>
   </div>
 </section>
 
-<!-- RESEARCH + PUBLICATIONS (combined preview) -->
-<section style="padding: 1rem 0 0;">
+<!-- RESEARCH & EVIDENCE -->
+<section class="section" id="research">
   <div class="container">
     <h2 class="section-title">Research &amp; Evidence</h2>
-    <p class="section-sub">Dr. Suffrin’s research focuses on translating frontline healthcare experience into evidence that can improve health programs, clinical outcomes and health equity.</p>
-    <div style="display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin-bottom: 2rem;">
-      <span style="background:#e3ded7; padding:0.3rem 1.2rem; border-radius:40px;">HIV/AIDS</span>
-      <span style="background:#e3ded7; padding:0.3rem 1.2rem; border-radius:40px;">TB/HIV integrated care</span>
-      <span style="background:#e3ded7; padding:0.3rem 1.2rem; border-radius:40px;">Adolescent Health</span>
-      <span style="background:#e3ded7; padding:0.3rem 1.2rem; border-radius:40px;">Health Systems</span>
+    <p class="section-sub">Dr. Suffrin's research focuses on translating frontline healthcare experience into evidence that improves health programs, clinical outcomes and health equity.</p>
+    <div class="research-tags">
+      <span class="tag">HIV/AIDS</span>
+      <span class="tag">TB/HIV Integrated Care</span>
+      <span class="tag">Adolescent Health</span>
+      <span class="tag">Health Systems</span>
+      <span class="tag">Rural Healthcare</span>
+      <span class="tag">Program Evaluation</span>
     </div>
+    <blockquote class="pull-quote">
+      <p>"Bridging the gap between global health evidence and the communities that need it most."</p>
+      <cite>— Dr. Dimitri JC Suffrin, MD · MMSc-GHD</cite>
+    </blockquote>
   </div>
 </section>
 
-<!-- PUBLICATIONS preview -->
-<section style="padding: 1rem 0 2rem;">
+<!-- PUBLICATIONS -->
+<section class="section section-light" id="publications">
   <div class="container">
     <h2 class="section-title">Featured Publications</h2>
     <div class="pub-grid">
       <div class="pub-item">
+        <div class="pub-journal">PLOS Global Public Health · 2024</div>
         <h4>Re-engagement and retention in HIV care after preventive default tracking</h4>
-        <div class="pub-meta">PLOS Global Public Health, 2024</div>
         <p>Rural Malawi cohort study on HIV care retention.</p>
-        <a href="#">Read Publication →</a>
+        <a href="#" class="pub-link">Read Publication <i class="fas fa-arrow-right fa-xs"></i></a>
       </div>
       <div class="pub-item">
+        <div class="pub-journal">AIDS Research and Therapy · 2025</div>
         <h4>Advanced HIV disease management in rural Malawi</h4>
-        <div class="pub-meta">AIDS Research and Therapy, 2025</div>
-        <p>Examined outcomes at two rural hospitals, Neno District.</p>
-        <a href="#">Read Publication →</a>
+        <p>Examined outcomes at two rural hospitals in Neno District.</p>
+        <a href="#" class="pub-link">Read Publication <i class="fas fa-arrow-right fa-xs"></i></a>
       </div>
       <div class="pub-item">
+        <div class="pub-journal">BMJ Open</div>
         <h4>Impact of a teen club model on HIV outcomes among adolescents</h4>
-        <div class="pub-meta">BMJ Open</div>
         <p>Adolescent HIV treatment outcomes in rural Malawi.</p>
-        <a href="#">Read Publication →</a>
+        <a href="#" class="pub-link">Read Publication <i class="fas fa-arrow-right fa-xs"></i></a>
       </div>
+    </div>
+    <div class="section-cta">
+      <a href="#" class="btn btn-outline-teal">View All Publications <i class="fas fa-arrow-right fa-xs"></i></a>
     </div>
   </div>
 </section>
 
 <!-- ARTICLES & PERSPECTIVES -->
-<section style="padding: 1rem 0 2rem; background: #f3efe9;">
+<section class="section section-cream" id="articles">
   <div class="container">
     <h2 class="section-title">Articles &amp; Perspectives</h2>
     <div class="article-grid">
       <div class="article-card">
         <div class="cat">Health Equity</div>
         <h4>Beyond Access: What Does Health Equity Really Mean?</h4>
-        <p>Reflections on systemic barriers and meaningful change.</p>
-        <a href="#">Read Article →</a>
+        <p>Reflections on systemic barriers and meaningful change in global health.</p>
+        <div class="article-meta"><i class="fas fa-clock"></i> 5 min read</div>
+        <a href="#" class="pub-link">Read Article <i class="fas fa-arrow-right fa-xs"></i></a>
       </div>
       <div class="article-card">
         <div class="cat">Global Health</div>
         <h4>Lessons From Delivering Healthcare in Rural Communities</h4>
-        <p>Field insights from Malawi and beyond.</p>
-        <a href="#">Read Article →</a>
+        <p>Field insights from Malawi and beyond — what the data doesn't show.</p>
+        <div class="article-meta"><i class="fas fa-clock"></i> 7 min read</div>
+        <a href="#" class="pub-link">Read Article <i class="fas fa-arrow-right fa-xs"></i></a>
       </div>
       <div class="article-card">
         <div class="cat">HIV/AIDS</div>
         <h4>The Future of HIV Care in Underserved Communities</h4>
-        <p>Innovations and program design for lasting impact.</p>
-        <a href="#">Read Article →</a>
+        <p>Innovations and program design for lasting impact on patient outcomes.</p>
+        <div class="article-meta"><i class="fas fa-clock"></i> 6 min read</div>
+        <a href="#" class="pub-link">Read Article <i class="fas fa-arrow-right fa-xs"></i></a>
       </div>
     </div>
-    <div style="text-align: right; margin-top: 0.5rem;"><a href="#" style="font-weight:600; color:var(--teal);">View all articles →</a></div>
+    <div class="section-cta">
+      <a href="#" class="btn btn-outline-teal">View All Articles <i class="fas fa-arrow-right fa-xs"></i></a>
+    </div>
   </div>
 </section>
 
 <!-- CONNECT / COLLABORATE -->
-<section style="padding: 2rem 0 1.5rem;">
+<section class="section" id="contact">
   <div class="container">
     <h2 class="section-title">Connect &amp; Collaborate</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 1.2rem 2.5rem; background: white; padding: 2rem; border-radius: 40px; border: 1px solid #ddd6cc;">
-      <a href="#" style="font-weight:600; color:var(--navy);"><i class="fab fa-orcid"></i> ORCID</a>
-      <a href="#" style="font-weight:600; color:var(--navy);"><i class="fab fa-google-scholar"></i> Google Scholar</a>
-      <a href="#" style="font-weight:600; color:var(--navy);"><i class="fab fa-pubmed"></i> PubMed</a>
-      <a href="#" style="font-weight:600; color:var(--navy);"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="#" style="font-weight:600; color:var(--navy);"><i class="fas fa-graduation-cap"></i> Harvard Profile</a>
-      <a href="#" style="font-weight:600; color:var(--navy);"><i class="fas fa-briefcase"></i> WCFR</a>
+    <p class="section-sub">Reach Dr. Suffrin through his academic and professional profiles or get in touch directly.</p>
+    <div class="connect-grid">
+      <a href="#" class="connect-pill">
+        <i class="fab fa-orcid"></i>
+        <span>ORCID</span>
+      </a>
+      <a href="#" class="connect-pill">
+        <i class="fas fa-graduation-cap"></i>
+        <span>Google Scholar</span>
+      </a>
+      <a href="#" class="connect-pill">
+        <i class="fas fa-book-medical"></i>
+        <span>PubMed</span>
+      </a>
+      <a href="#" class="connect-pill">
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+      <a href="#" class="connect-pill">
+        <i class="fas fa-university"></i>
+        <span>Harvard Profile</span>
+      </a>
+      <a href="#" class="connect-pill">
+        <i class="fas fa-briefcase"></i>
+        <span>WCFR</span>
+      </a>
     </div>
   </div>
 </section>
@@ -207,10 +309,10 @@
         <p class="footer-tagline"><strong>Advancing Health Equity Through<br>Research, Innovation &amp; Global Health Delivery</strong></p>
         <p class="footer-desc">A physician, global health researcher and consultant committed to reducing health disparities in underserved communities worldwide.</p>
         <div class="footer-socials">
-          <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" title="ORCID"><i class="fab fa-orcid"></i></a>
-          <a href="#" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-          <a href="#" title="PubMed"><i class="fas fa-book-medical"></i></a>
+          <a href="#" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" title="ORCID" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
+          <a href="#" title="Google Scholar" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+          <a href="#" title="PubMed" aria-label="PubMed"><i class="fas fa-book-medical"></i></a>
         </div>
       </div>
 
@@ -218,15 +320,15 @@
       <div class="footer-links-col">
         <h4 class="footer-col-title">Quick Links</h4>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Expertise</a></li>
-          <li><a href="#">Impact</a></li>
-          <li><a href="#">Research &amp; Evidence</a></li>
-          <li><a href="#">Publications</a></li>
-          <li><a href="#">Articles &amp; Perspectives</a></li>
-          <li><a href="#">Speaking</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#research">Research &amp; Evidence</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#articles">Articles &amp; Perspectives</a></li>
+          <li><a href="#speaking">Speaking</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
 
@@ -273,6 +375,6 @@
   </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
-
