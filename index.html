@@ -18,25 +18,40 @@
   <div class="container nav-flex">
     <div class="logo">
   <a href="#">
-    <img src="Drsuffrinlogo.png" alt="Dr. Suffrin Logo">
+    <img src="images/Drsuffrinlogo.png" alt="Dr. Suffrin Logo">
   </a>
     </div>
-    <div class="nav-links">
+        <div class="nav-links">
       <a href="#">Home</a>
       <a href="#">About</a>
-      <a href="#">Expertise</a>
-      <a href="#">Impact</a>
-      <a href="#">Research</a>
-      <a href="#">Publications</a>
-      <a href="#">Articles</a>
-      <a href="#">Insights</a>
-      <a href="#">Speaking</a>
+      <div class="nav-dropdown">
+        <a href="#" class="nav-dropdown-toggle">Work <i class="fas fa-chevron-down fa-xs"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="#">Expertise</a>
+          <a href="#">Impact</a>
+          <a href="#">Program Implementation</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="#" class="nav-dropdown-toggle">Research <i class="fas fa-chevron-down fa-xs"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="#">Research &amp; Evidence</a>
+          <a href="#">Publications</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="#" class="nav-dropdown-toggle">Insights <i class="fas fa-chevron-down fa-xs"></i></a>
+        <div class="nav-dropdown-menu">
+          <a href="#">Articles &amp; Perspectives</a>
+          <a href="#">Speaking</a>
+        </div>
+      </div>
       <a href="#">Contact</a>
     </div>
     <div class="nav-icons">
       <a href="#"><i class="fab fa-linkedin-in"></i></a>
       <a href="#"><i class="fab fa-orcid"></i></a>
-      <a href="#"><i class="fab fa-google-scholar"></i></a>
+      <a href="#" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
     </div>
   </div>
 </nav>
@@ -182,20 +197,79 @@
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-    <div class="brand">Dr. Dimitri JC Suffrin <span>·</span> MD <span>·</span> MMSc-GHD <span>·</span> Global Health Technical Consultant</div>
-    <div style="margin: 0.8rem 0 1.2rem;">Advancing health equity through evidence, innovation and better healthcare delivery.</div>
-    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem 1.8rem;">
-      <a href="#">About</a><a href="#">Expertise</a><a href="#">Impact</a><a href="#">Research</a><a href="#">Publications</a>
-      <a href="#">Insights</a><a href="#">Speaking</a><a href="#">Contact</a>
+    <div class="footer-main">
+
+      <!-- Col 1: Brand -->
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          <img src="images/Drsuffrinlogo.png" alt="Dr. Suffrin Logo">
+        </div>
+        <p class="footer-tagline"><strong>Advancing Health Equity Through<br>Research, Innovation &amp; Global Health Delivery</strong></p>
+        <p class="footer-desc">A physician, global health researcher and consultant committed to reducing health disparities in underserved communities worldwide.</p>
+        <div class="footer-socials">
+          <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" title="ORCID"><i class="fab fa-orcid"></i></a>
+          <a href="#" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+          <a href="#" title="PubMed"><i class="fas fa-book-medical"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div class="footer-links-col">
+        <h4 class="footer-col-title">Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Expertise</a></li>
+          <li><a href="#">Impact</a></li>
+          <li><a href="#">Research &amp; Evidence</a></li>
+          <li><a href="#">Publications</a></li>
+          <li><a href="#">Articles &amp; Perspectives</a></li>
+          <li><a href="#">Speaking</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Contact -->
+      <div class="footer-contact-col">
+        <h4 class="footer-col-title">Contact</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Global Health Technical Consultant<br>International Programs</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span><a href="mailto:contact@drsuffrin.com">contact@drsuffrin.com</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-graduation-cap"></i>
+          <span><a href="#">Harvard Medical School Profile</a></span>
+        </div>
+        <div class="footer-founded">
+          <div class="footer-founded-label">Credentials</div>
+          <div class="footer-founded-year">MD &middot; MMSc-GHD</div>
+          <div class="footer-founded-place">Harvard Global Health Delivery</div>
+        </div>
+      </div>
+
+    </div><!-- /.footer-main -->
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <p>&copy; 2026 Dr. Dimitri JC Suffrin. All rights reserved.</p>
+        <p class="footer-bottom-credit">Global Health &middot; Evidence &middot; Equity &middot; Impact</p>
+      </div>
+      <div class="footer-bottom-center">
+        <em>"Evidence. Equity. Impact."</em>
+      </div>
+      <div class="footer-bottom-right">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Disclaimer</a>
+      </div>
     </div>
-    <div style="margin-top: 1.5rem; border-top: 1px solid #3a4f5f; padding-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem;">
-      <a href="#"><i class="fab fa-orcid"></i> ORCID</a>
-      <a href="#"><i class="fab fa-pubmed"></i> PubMed</a>
-      <a href="#"><i class="fab fa-google-scholar"></i> Google Scholar</a>
-      <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="#">WCFR</a>
-    </div>
-    <div style="margin-top: 1.2rem; font-size: 0.85rem; opacity:0.7;">© 2026 Dr. Dimitri JC Suffrin · Evidence. Equity. Impact.</div>
+
   </div>
 </footer>
 
