@@ -9,7 +9,7 @@
 const LINKS = {
   email:    'sdimitri33@gmail.com',
   cv:       'cv/Suffrin-CV.pdf',          // put the PDF at /cv/Suffrin-CV.pdf
-  orcid:    '',                           // e.g. https://orcid.org/0000-0000-0000-0000
+  orcid:    '',                           // https://orcid.org/0000-0001-7403-3460
   scholar:  '',                           // Google Scholar profile URL
   pubmed:   '',                           // PubMed author search URL
   linkedin: '',                           // LinkedIn profile URL — paste it here; the icon is already on every page
