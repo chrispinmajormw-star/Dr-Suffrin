@@ -12,7 +12,7 @@ const LINKS = {
   orcid:    'https://orcid.org/0000-0001-7403-3460',
   scholar:  '',                           // Google Scholar profile URL
   pubmed:   '',                           // PubMed author search URL
-  linkedin: '',                           // LinkedIn profile URL — paste it here; the icon is already on every page
+  linkedin: 'https://www.linkedin.com/in/jcdimitritrisuffrin',   // from his ORCID record
   harvard:  ''                            // Harvard profile URL
 };
 
