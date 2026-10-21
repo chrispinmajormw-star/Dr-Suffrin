@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects · Dr. Jean Christophe Dimitri Suffrin</title>
+  <meta name="description" content="Projects implemented and led in rural Malawi: community scorecards for TB, sputum collection points, AI chest X-ray, GeneXpert expansion, adolescent HIV and digital health.">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="projects">
+<div id="site-header"></div>
+
+<main id="main">
+
+  <section class="page-intro">
+    <div class="wrap">
+      <h1>Projects</h1>
+      <p class="lede">What I have built, implemented or led. Each project is written as a short case: the problem, the intervention, how it was studied, and what I am learning.</p>
+    </div>
+  </section>
+
+  <!-- How I work -->
+  <section class="band" id="how-i-work">
+    <div class="wrap">
+      <div class="band-head">
+        <h2>How I work</h2>
+        <p>From problem to evidence to implementation to evaluation. Every project below follows some version of this cycle.</p>
+      </div>
+      <ol class="method">
+        <li>Identify the health-system problem<span>Start from what is failing patients</span></li>
+        <li>Understand the context<span>Data, people, infrastructure</span></li>
+        <li>Design an intervention<span>Grounded in evidence</span></li>
+        <li>Implement with frontline teams<span>Built with the people who run it</span></li>
+        <li>Measure what changes<span>Routine and study data</span></li>
+        <li>Study why it worked, or didn’t<span>Mixed methods</span></li>
+        <li>Adapt<span>And start again</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Project cases -->
+  <section class="band band-wash" id="cases">
+    <div class="wrap">
+      <div class="band-head"><h2>Project cases</h2></div>
+
+      <div class="filters" role="group" aria-label="Filter projects by domain">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="tb">TB &amp; HIV</button>
+        <button type="button" data-filter="implementation">Implementation science</button>
+        <button type="button" data-filter="systems">Health systems</button>
+        <button type="button" data-filter="digital">Digital &amp; AI</button>
+        <button type="button" data-filter="community">Community health</button>
+        <button type="button" data-filter="equity">Health equity</button>
+      </div>
+
+      <div class="projects">
+
+        <details class="project" id="p-scorecards" data-tags="tb community implementation equity">
+          <summary>
+            <div>
+              <h3>Community scorecards &amp; TB</h3>
+              <div class="pmeta"><span><b>Role</b> Research lead, program implementation</span><span><b>Setting</b> Neno District, Malawi</span><span class="status">In progress</span></div>
+            </div>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="project-body">
+            <section><h4>The problem</h4><p>TB case detection remained below the desired level.</p></section>
+            <section><h4>The intervention</h4><p>Community scorecards designed to strengthen community accountability and the responsiveness of TB services.</p></section>
+            <section><h4>Research design</h4><p>Mixed-methods evaluation incorporating quantitative and qualitative approaches.</p></section>
+            <section><h4>What I’m learning</h4><ul><li><span class="todo">Short observation 1</span></li><li><span class="todo">Short observation 2</span></li></ul></section>
+            <section class="full"><h4>Study timeline</h4>
+              <ol class="timeline">
+                <li>Problem identified</li>
+                <li>Intervention designed</li>
+                <li>Baseline</li>
+                <li class="now">Implementation</li>
+                <li class="later">Follow-up</li>
+                <li class="later">Analysis</li>
+                <li class="later">Dissemination</li>
+              </ol>
+            </section>
+            <section class="full"><h4>Outputs</h4><p><span class="todo">Research protocol · presentation · manuscript · dataset/dashboard (keep only what exists)</span></p></section>
+            <div class="full trail"><span class="trail-label">Follow the trail:</span><ul>
+              <li><a href="research.html#community-scorecards">Research</a></li>
+              <li><a href="fieldwork.html#note-01">Field note 01</a></li>
+              <li><a href="research.html#field-to-paper">From field to paper</a></li>
+            </ul></div>
+          </div>
+        </details>
+
+        <details class="project" id="p-cscp" data-tags="tb community equity">
+          <summary>
+            <div>
+              <h3>Community sputum collection points</h3>
+              <div class="pmeta"><span><b>Role</b> <span class="todo">Your role</span></span><span><b>Setting</b> Neno District, Malawi</span></div>
+            </div>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="project-body">
+            <section><h4>The problem</h4><p>People with TB symptoms had to travel to a facility just to give a sample, and many never did.</p></section>
+            <section><h4>The intervention</h4><p>Established and expanded community sputum collection infrastructure, bringing the first step of diagnosis closer to where people live.</p></section>
+            <section><h4>What I’m learning</h4><p><span class="todo">One or two lessons, e.g. on sample transport or community ownership.</span></p></section>
+            <section><h4>Outputs</h4><p><span class="todo">CSCP study outputs</span></p></section>
+            <div class="full trail"><span class="trail-label">Follow the trail:</span><ul>
+              <li><a href="fieldwork.html#note-01">Field note 01</a></li>
+              <li><a href="research.html#community-scorecards">Related research</a></li>
+            </ul></div>
+          </div>
+        </details>
+
+        <details class="project" id="p-ai-cxr" data-tags="tb digital implementation systems">
+          <summary>
+            <div>
+              <h3>AI-supported chest X-ray screening</h3>
+              <div class="pmeta"><span><b>Role</b> <span class="todo">Your role</span></span><span><b>Setting</b> Rural Malawi</span><span class="status">In progress</span></div>
+            </div>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="project-body">
+            <section><h4>The problem</h4><p>Symptom screening alone misses many people with TB, and radiologists are scarce in rural districts.</p></section>
+            <section><h4>The intervention</h4><p>Implemented AI-supported chest X-ray screening within a rural health system, linked to referral and GeneXpert confirmation.</p></section>
+            <section><h4>Implementation focus</h4><p>Screening workflow, referral pathway, diagnostic capacity, power and connectivity, and linkage to confirmatory testing.</p></section>
+            <section><h4>What I’m learning</h4><p>The accuracy of the algorithm matters less than the pathway it sits in.</p></section>
+            <div class="full trail"><span class="trail-label">Follow the trail:</span><ul>
+              <li><a href="research.html#ai-tb-screening">Research</a></li>
+              <li><a href="fieldwork.html#note-02">Field note 02</a></li>
+              <li><a href="research.html#q-digital">Open questions</a></li>
+            </ul></div>
+          </div>
+        </details>
+
+        <details class="project" id="p-genexpert" data-tags="tb systems">
+          <summary>
+            <div>
+              <h3>GeneXpert expansion</h3>
+              <div class="pmeta"><span><b>Role</b> <span class="todo">Your role</span></span><span><b>Setting</b> District health facilities, Malawi</span></div>
+            </div>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="project-body">
+            <section><h4>The problem</h4><p>Molecular TB testing was concentrated in few sites, so samples travelled far and results came back late.</p></section>
+            <section><h4>The intervention</h4><p>Expanded GeneXpert availability across additional district sites.</p></section>
+            <section><h4>Scale</h4><p><span class="todo">Number of sites, with context (e.g. from X to Y sites).</span></p></section>
+            <section><h4>What I’m learning</h4><p><span class="todo">e.g. what keeps a machine running: cartridges, power, maintenance.</span></p></section>
+            <div class="full trail"><span class="trail-label">Follow the trail:</span><ul>
+              <li><a href="fieldwork.html#note-01">Field note 01</a></li>
+              <li><a href="fieldwork.html#system-map">Health system map</a></li>
+            </ul></div>
+          </div>
+        </details>
+
+        <details class="project" id="p-adolescent-hiv" data-tags="tb equity community">
+          <summary>
+            <div>
+              <h3>Adolescent HIV services &amp; social support</h3>
+              <div class="pmeta"><span><b>Role</b> <span class="todo">Your role</span></span><span><b>Setting</b> Rural Malawi</span></div>
+            </div>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="project-body">
+            <section><h4>The problem</h4><p>Adolescents living with HIV face lower viral suppression and higher loss to follow-up than adults.</p></section>
+            <section><h4>The intervention</h4><p>Supported expansion of adolescent HIV services, including Teen Clubs and social-support interventions.</p></section>
+            <section><h4>Research</h4><p>Teen club model and HIV outcomes among adolescents, published in <em>BMJ Open</em>.</p></section>
+            <section><h4>What I’m learning</h4><p>Clinical outcomes for adolescents are tied to school, money, family and peer support.</p></section>
+            <div class="full trail"><span class="trail-label">Follow the trail:</span><ul>
+              <li><a href="research.html#adolescent-hiv">Research</a></li>
+              <li><a href="publications.html#pub-teen-club">Publication</a></li>
+              <li><a href="fieldwork.html#note-03">Field note 03</a></li>
+            </ul></div>
+          </div>
+        </details>
+
+        <details class="project" id="p-aspire" data-tags="tb equity">
+          <summary>
+            <div>
+              <h3>ASPIRE</h3>
+              <div class="pmeta"><span><b>Role</b> <span class="todo">Your role</span></span><span><b>Setting</b> <span class="todo">Setting</span></span></div>
+            </div>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="project-body">
+            <section><h4>The problem</h4><p><span class="todo">What problem ASPIRE addresses.</span></p></section>
+            <section><h4>The intervention</h4><p><span class="todo">What ASPIRE does. Adjust the domain tags in data-tags to match.</span></p></section>
+            <section><h4>What I’m learning</h4><p><span class="todo">One or two lessons.</span></p></section>
+            <section><h4>Outputs</h4><p><span class="todo">Outputs, if any can be public.</span></p></section>
+          </div>
+        </details>
+
+        <details class="project" id="p-digital" data-tags="digital systems">
+          <summary>
+            <div>
+              <h3>Digital health systems: EMR, DHIS2 and data visualization</h3>
+              <div class="pmeta"><span><b>Role</b> <span class="todo">Your role</span></span><span><b>Setting</b> District health system, Malawi</span></div>
+            </div>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="project-body">
+            <section><h4>The problem</h4><p>Data was collected for reporting upward more than for decisions at the facility.</p></section>
+            <section><h4>The work</h4><p>Worked across EMR, DHIS2 and data visualization systems to make program data usable by frontline teams.</p></section>
+            <section><h4>What I’m learning</h4><p>A dashboard only matters if someone uses it to change what happens on Monday morning.</p></section>
+            <section><h4>Outputs</h4><p><span class="todo">e.g. a public-safe TB cascade dashboard (screened → presumptive → tested → diagnosed → treated).</span></p></section>
+            <div class="full trail"><span class="trail-label">Follow the trail:</span><ul>
+              <li><a href="research.html#q-systems">Open questions</a></li>
+              <li><a href="research.html#q-digital">Digital health questions</a></li>
+            </ul></div>
+          </div>
+        </details>
+
+        <details class="project" id="p-phc" data-tags="systems community implementation equity">
+          <summary>
+            <div>
+              <h3>District PHC &amp; community health systems strengthening</h3>
+              <div class="pmeta"><span><b>Role</b> <span class="todo">Your role</span></span><span><b>Setting</b> District level, Malawi</span><span class="status">In progress</span></div>
+            </div>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="project-body">
+            <section><h4>The problem</h4><p>Community, primary care and hospital services often operate as separate programs rather than one system.</p></section>
+            <section><h4>The work</h4><p>Contributed to district-level approaches to workforce, digital systems and service delivery.</p></section>
+            <section><h4>What I’m learning</h4><p><span class="todo">One or two lessons on integration.</span></p></section>
+            <div class="full trail"><span class="trail-label">Follow the trail:</span><ul>
+              <li><a href="fieldwork.html#system-map">Health system map</a></li>
+              <li><a href="fieldwork.html#note-03">Field note 03</a></li>
+              <li><a href="research.html#q-systems">Open questions</a></li>
+            </ul></div>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+</body>
+</html>

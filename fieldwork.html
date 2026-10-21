@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Field Work · Dr. Jean Christophe Dimitri Suffrin</title>
+  <meta name="description" content="Field notes from rural Malawi: where TB patients are lost between screening and treatment, what happens after an AI X-ray finds an abnormality, and the last mile of health care.">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="fieldwork">
+<div id="site-header"></div>
+
+<main id="main">
+
+  <section class="page-intro">
+    <div class="wrap">
+      <h1>Field Work</h1>
+      <p class="lede">Short notes on problems I have met while delivering care in rural Malawi. Each one follows a patient through the health system and marks where they can disappear.</p>
+      <nav class="in-page-nav" aria-label="Field notes">
+        <a href="#note-01">01 Finding TB vs. finding TB cases</a>
+        <a href="#note-02">02 After the AI X-ray</a>
+        <a href="#note-03">03 The last mile of health care</a>
+        <a href="#system-map">Where the work happens</a>
+      </nav>
+    </div>
+  </section>
+
+  <div class="wrap">
+
+    <!-- Field note 01 -->
+    <article class="fieldnote" id="note-01">
+      <header class="fn-head">
+        <span class="fn-num" aria-hidden="true">01</span>
+        <div>
+          <p class="kicker">TB case finding</p>
+          <h2>When finding TB isn’t the same as finding TB cases</h2>
+        </div>
+      </header>
+      <div class="fn-body">
+        <div class="prose">
+          <p>A person with a cough in a village is not yet a TB case. They become one only after a long chain of events goes right: someone notices, a sample is collected, it travels, it is tested, a result comes back, and treatment starts. Every link in that chain is a place where the person can quietly drop out of the system.</p>
+          <p>Programs are usually judged by the last number in the chain. The work happens in the links.</p>
+        </div>
+
+        <figure class="figure">
+          <div class="pathway">
+            <ol>
+              <li><span class="stage">Community</span><span class="note">Symptoms noticed</span><span class="loss">Symptoms normalised or not recognised</span></li>
+              <li><span class="stage">Screening</span><span class="note">Symptom or X-ray screen</span><span class="loss">Never screened</span></li>
+              <li><span class="stage">Sputum</span><span class="note">Sample collected</span><span class="loss">Unable to produce sample</span></li>
+              <li><span class="stage">Transport</span><span class="note">Sample moves to lab</span><span class="loss">Sample delayed, lost or spoiled</span></li>
+              <li><span class="stage">Laboratory</span><span class="note">GeneXpert or microscopy</span><span class="loss">Machine down, cartridges out</span></li>
+              <li><span class="stage">Result</span><span class="note">Reaches clinician and patient</span><span class="loss">Result never reaches patient</span></li>
+              <li><span class="stage">Treatment</span><span class="note">Started and notified</span></li>
+            </ol>
+          </div>
+          <div class="pathway-legend"><span class="k-care">Care pathway</span><span class="k-loss">Where patients can be lost</span></div>
+          <figcaption>The TB diagnostic pathway from community to treatment. A program that adds screening without strengthening the links after it produces more people waiting, not more people treated.</figcaption>
+        </figure>
+
+        <div class="prose">
+          <h3>What this taught me</h3>
+          <p><span class="todo">Add one concrete observation from your own work, for example a moment when a strong screening number hid a weak link further down the chain. Avoid identifiable patient details.</span></p>
+        </div>
+        <div class="trail"><span class="trail-label">Follow the trail:</span>
+          <ul>
+            <li><a href="research.html#community-scorecards">Research: community accountability</a></li>
+            <li><a href="projects.html#p-cscp">Project: sputum collection points</a></li>
+            <li><a href="projects.html#p-genexpert">Project: GeneXpert expansion</a></li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Field note 02 -->
+    <article class="fieldnote" id="note-02">
+      <header class="fn-head">
+        <span class="fn-num" aria-hidden="true">02</span>
+        <div>
+          <p class="kicker">AI-enabled diagnostics</p>
+          <h2>What happens when an AI X-ray finds an abnormality?</h2>
+        </div>
+      </header>
+      <div class="fn-body">
+        <div class="prose">
+          <p>The software works in seconds. The image is flagged, a score appears, and the screen says the patient needs further testing. For the technology, the job is done. For the patient and the health system, it has just begun.</p>
+        </div>
+
+        <figure class="figure">
+          <div class="pathway">
+            <ol>
+              <li><span class="stage">Screening</span><span class="note">Patient reaches the X-ray</span></li>
+              <li><span class="stage">Abnormal image</span><span class="note">AI flags likely TB</span><span class="loss">No clinician available to review</span></li>
+              <li><span class="stage">Referral</span><span class="note">Patient told to give sputum</span><span class="loss">Patient goes home</span></li>
+              <li><span class="stage">Sputum</span><span class="note">Collected same day or later</span><span class="loss">Does not return</span></li>
+              <li><span class="stage">GeneXpert</span><span class="note">Bacteriological confirmation</span><span class="loss">Testing site is distant</span></li>
+              <li><span class="stage">Result</span><span class="note">Communicated back</span><span class="loss">Cannot be reached</span></li>
+              <li><span class="stage">Treatment</span><span class="note">Started</span></li>
+            </ol>
+          </div>
+          <div class="pathway-legend"><span class="k-care">Care pathway</span><span class="k-loss">Where patients can be lost</span></div>
+          <figcaption>AI-supported chest X-ray screening shortens one step. Everything after the abnormal image still depends on people, transport and infrastructure.</figcaption>
+        </figure>
+
+        <div class="prose"><h3>What happens when…</h3></div>
+        <div class="whatif">
+          <div><strong>The patient lives far away</strong>Returning for sputum or results costs a day’s income and a transport fare.</div>
+          <div><strong>Transport is unavailable</strong>Samples and patients wait for a vehicle that serves many sites.</div>
+          <div><strong>Electricity fails</strong>The X-ray unit, the AI software and the GeneXpert machine all stop.</div>
+          <div><strong>The diagnostic site is distant</strong>The sample travels for days and results arrive after the patient has given up.</div>
+          <div><strong>The patient doesn’t return</strong>The AI found the abnormality, and the system lost the person.</div>
+        </div>
+
+        <div class="prose">
+          <p>This is implementation science in its most practical form: a tool’s accuracy matters less than the pathway it sits in.</p>
+          <p><span class="todo">Add one specific operational lesson from the rollout you were part of.</span></p>
+        </div>
+        <div class="trail"><span class="trail-label">Follow the trail:</span>
+          <ul>
+            <li><a href="research.html#ai-tb-screening">Research: AI-enabled TB screening</a></li>
+            <li><a href="projects.html#p-ai-cxr">Project: AI chest X-ray</a></li>
+            <li><a href="research.html#q-digital">Open questions</a></li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Field note 03 -->
+    <article class="fieldnote" id="note-03">
+      <header class="fn-head">
+        <span class="fn-num" aria-hidden="true">03</span>
+        <div>
+          <p class="kicker">Health equity</p>
+          <h2>The last mile of health care</h2>
+        </div>
+      </header>
+      <div class="fn-body">
+        <div class="prose">
+          <p>A service can be technically available and still out of reach. The clinic is open, the drugs are in stock, the test exists. Yet for the person who needs it, the distance between home and that service is made of many things at once.</p>
+        </div>
+        <div class="barriers" aria-label="Barriers that make up the last mile">
+          <span>Geography</span><span>Transport</span><span>Poverty</span><span>Community health</span><span>Facility capacity</span><span>Social support</span>
+        </div>
+        <div class="prose">
+          <p>None of these is solved by a single intervention. A free test still costs a transport fare. A community health worker can bring care closer, but only if the facility behind them has capacity. An adolescent can be offered treatment, but adherence depends on school, food and family.</p>
+          <p>Closing the last mile means designing for the patient’s whole journey, not only for the point where the service is delivered.</p>
+          <p><span class="todo">Optional: add one field photograph from rural Malawi here, with consent, and a one-line caption.</span></p>
+        </div>
+        <div class="trail"><span class="trail-label">Follow the trail:</span>
+          <ul>
+            <li><a href="research.html#adolescent-hiv">Research: adolescent HIV care</a></li>
+            <li><a href="projects.html#p-phc">Project: PHC &amp; community health</a></li>
+            <li><a href="writing.html">Essays</a></li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- Health system map -->
+  <section class="band band-wash" id="system-map">
+    <div class="wrap">
+      <div class="band-head">
+        <h2>Where the work happens</h2>
+        <p>A simplified map of the district health system, from household to hospital, and where the interventions I have worked on operate.</p>
+      </div>
+      <div class="tiers">
+        <div class="tier"><div class="tier-bar"></div><h4>Community</h4><p class="who">Households, CHWs, community leaders</p>
+          <ul><li>Community scorecards</li><li>Active case finding</li><li>Adolescent social support</li></ul></div>
+        <div class="tier"><div class="tier-bar"></div><h4>Health post</h4><p class="who">Outreach, first contact</p>
+          <ul><li>Community sputum collection points</li><li>Screening and referral</li></ul></div>
+        <div class="tier"><div class="tier-bar"></div><h4>Health centre</h4><p class="who">Primary care, diagnosis</p>
+          <ul><li>GeneXpert testing</li><li>AI-supported chest X-ray</li><li>Teen Clubs</li><li>EMR and DHIS2 reporting</li></ul></div>
+        <div class="tier"><div class="tier-bar"></div><h4>District hospital</h4><p class="who">Referral, advanced care</p>
+          <ul><li>Advanced HIV disease management</li><li>Laboratory and imaging</li><li>District data and planning</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+</body>
+</html>
