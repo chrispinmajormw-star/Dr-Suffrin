@@ -7,14 +7,16 @@
 
 /* ---- 1. EDIT THESE LINKS ONCE — they update across every page ---- */
 const LINKS = {
-  email:    'contact@drsuffrin.com',
+  email:    'sdimitri33@gmail.com',
   cv:       'cv/Suffrin-CV.pdf',          // put the PDF at /cv/Suffrin-CV.pdf
   orcid:    '',                           // e.g. https://orcid.org/0000-0000-0000-0000
   scholar:  '',                           // Google Scholar profile URL
   pubmed:   '',                           // PubMed author search URL
-  linkedin: '',                           // LinkedIn profile URL
+  linkedin: '',                           // LinkedIn profile URL — paste it here; the icon is already on every page
   harvard:  ''                            // Harvard profile URL
 };
+
+const ICON_LINKEDIN = '<svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>';
 
 /* ---- 2. Navigation (order = order shown) ---- */
 const NAV = [
@@ -44,7 +46,6 @@ const NAV = [
     <a class="brand" href="${url('index.html')}" aria-label="Dr. Suffrin, home">
       <img src="${url('images/logo-ink.png')}" alt="Dr. Suffrin" width="245" height="34">
     </a>
-    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="primary-nav">Menu</button>
     <nav class="primary-nav" id="primary-nav" aria-label="Main">
       ${NAV.map(n => `<a href="${url(n.href)}"${n.id === page ? ' aria-current="page"' : ''}>${n.label}</a>`).join('')}
     </nav>
@@ -52,6 +53,8 @@ const NAV = [
       <a class="btn btn-line btn-sm" data-link="cv" href="#">CV</a>
       <a class="btn btn-ink btn-sm" href="${url('contact.html')}"${page === 'contact' ? ' aria-current="page"' : ''}>Contact</a>
     </div>
+    <a class="header-social" data-link="linkedin" data-keep href="#" aria-label="LinkedIn">${ICON_LINKEDIN}</a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="primary-nav">Menu</button>
   </div>
 </header>`;
   }
@@ -81,7 +84,7 @@ const NAV = [
           <li><a data-link="orcid" href="#">ORCID</a></li>
           <li><a data-link="scholar" href="#">Google Scholar</a></li>
           <li><a data-link="pubmed" href="#">PubMed</a></li>
-          <li><a data-link="linkedin" href="#">LinkedIn</a></li>
+          <li><a class="with-icon" data-link="linkedin" data-keep href="#">${ICON_LINKEDIN}LinkedIn</a></li>
         </ul>
       </div>
     </div>
@@ -97,6 +100,13 @@ const NAV = [
   document.querySelectorAll('[data-link]').forEach(function (a) {
     const key = a.dataset.link;
     const val = LINKS[key];
+    if (!val && a.dataset.keep !== undefined) {   // shown on purpose before the URL exists
+      a.href = '#';
+      a.setAttribute('aria-disabled', 'true');
+      a.title = 'Profile link coming soon';
+      a.addEventListener('click', e => e.preventDefault());
+      return;
+    }
     if (!val) {                       // not set yet: hide it rather than show a dead link
       const li = a.closest('li');
       (li && li.parentElement.closest('.site-footer') ? li : a).hidden = true;
