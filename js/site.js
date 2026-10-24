@@ -54,7 +54,7 @@ const NAV = [
       <a class="btn btn-ink btn-sm" href="${url('contact.html')}"${page === 'contact' ? ' aria-current="page"' : ''}>Contact</a>
     </div>
     <a class="header-social" data-link="linkedin" data-keep href="#" aria-label="LinkedIn">${ICON_LINKEDIN}</a>
-    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu"><span class="menu-bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-label">Menu</span></button>
   </div>
 </header>`;
   }
@@ -130,11 +130,18 @@ const NAV = [
     onScroll();
   }
   if (hdr && btn) {
-    btn.addEventListener('click', function () {
-      const open = hdr.classList.toggle('open');
+    const label = btn.querySelector('.menu-label');
+    const setMenu = function (open) {
+      hdr.classList.toggle('open', open);
+      body.classList.toggle('menu-open', open);
       btn.setAttribute('aria-expanded', String(open));
-      btn.textContent = open ? 'Close' : 'Menu';
-    });
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      if (label) label.textContent = open ? 'Close' : 'Menu';
+    };
+    btn.addEventListener('click', () => setMenu(!hdr.classList.contains('open')));
+    hdr.querySelectorAll('.primary-nav a, .header-actions a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && hdr.classList.contains('open')) { setMenu(false); btn.focus(); } });
+    window.addEventListener('resize', () => { if (window.innerWidth > 1060) setMenu(false); });
   }
 
   /* ---- Projects: filter by research domain (projects.html#tb etc.) ---- */
